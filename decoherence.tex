@@ -1,0 +1,101 @@
+\section{Decoherence}\label{sec:decoherence}
+
+Decoherence is the process through which quantum correlations disperse
+information throughout the degrees of freedom that are effectively
+beyond the observer's control. It has been suggested as the mechanism
+through which a measurement of a quantum system is effectively made
+\cite{zurek}. In general, any interaction with the environment will
+eventually lead to decoherence and this is one of the main obstacles
+in generating and maintaining entangled resources. At the beginning of
+this investigation we proposed that entanglement may be sensitive
+enough to be affected by gravitational waves. In our approach we have
+only investigated the dynamics of two neutrons in a harmonic well
+subject to gravitational radiation by solving the Schr\"{o}dinger
+equation for the modified Hamiltonian \eqref{eq:main}. This has
+allowed us to study the effects of the waves on the wavefunction of
+neutrons entangling in a harmonic potential, but the fact that we keep
+track of all of the degrees of freedom meant that it was impossible to
+observe decoherence.
+
+In order to be able to describe decoherence we have to construct a
+dynamical model of a system coupled to its environment. In the
+Feynman-Vernon theory of the influence functional \cite{feynman} we
+consider a system A interacting with a second system B (the reservoir)
+described by the Hamiltonian
+\begin{equation}
+H = H_A + H_I + H_B,
+\end{equation}
+where system A consists of a single particle, the reservior consists of
+N particles and $H_I$ is the interaction Hamiltonian. We can obtain
+the reduced density operator for system A by tracing out all the
+environment coordinates. Assuming that the initial density operator is
+separable into a product of the density operators for A and B we get
+\begin{equation}
+\rho(x, y, t) = \int \mathrm{d} x^\prime \mathrm{d} y^\prime J(x, y,
+t; x^\prime, y^\prime, 0)\rho_A(x^\prime, y^\prime, 0),
+\end{equation}
+where x and y are the position coordinates of the single particle,
+\begin{equation}
+J(x, y, t; x^\prime, y^\prime, 0) = \int \int \mathrm{D} x \mathrm{D}
+y \exp \left[ i \frac{S_A[x]}{\hbar} \right] \exp \left[ -i
+  \frac{S_A[y]}{\hbar} \right] F[x, y],
+\end{equation}
+$F[x, y]$ is the so called influence functional given by
+\begin{equation}
+\begin{array} {lcl}
+F[x, y] & = & \int \mathrm{d} \bm{R^\prime} \mathrm{d} \bm{Q^\prime}
+\mathrm{d} \bm{R} \rho_B(\bm{R^\prime}, \bm{Q^\prime}, 0) \int \int
+\mathrm{D} \bm{R} \mathrm{D} \bm{Q} \\\\ & & \times \exp \left[
+  \frac{i}{\hbar} \left( S_I[x, \bm{R}] - S_I[y, \bm{Q}] + S_B[\bm{R}]
+  - S_B[\bm{Q}] \right) \right],
+\end{array}
+\end{equation}
+$S_i$ is the action corresponding to the Hamiltonian $H_i$ and
+$\bm{R}$, $\bm{Q}$ are vectors of the positions of the reservoir
+particles. This has been solved exactly in \cite{feynman} in the limit
+of a weak coupling, where we only have to consider the linear response
+of the reservoir to the system and we can describe the environment in
+the harmonic approximation.
+
+The gravitational wave background could potentially be modelled with a
+collection of harmonic oscillators. However, as we have seen in
+section 3 the interaction of the wave function with gravitational
+waves is implemented through a modification of the kinetic energy term
+and not via an effective potential and modelling the coupling with the
+system with a linear response would be insufficient. The more
+complicated interaction would lead to an intractable form for the
+influence functional. Furthermore, there is no way of obtaining an
+irreversible process such as decoherence using the above solution. We
+do not consider a reservoir of infinite size and any information lost
+by the system will return within a finite period of time.
+
+Caldeira and Leggett addressed the issue of irreversibility in 1983
+\cite{caldeira} in an attempt to solve the problem of quantum Brownian
+motion. Instead of coupling the system A to a reservoir B they
+replaced the system-environment coupling with an externally applied
+classical force $F(t)$. The fluctuating force has to obey the standard
+stochastic relations
+\begin{equation}
+\langle F(t) \rangle = 0,
+\end{equation}
+\begin{equation}
+\langle F(t) F(t^\prime) \rangle = 2 \eta k_B T \delta (t - t^\prime),
+\end{equation}
+where $\eta$ is a damping constant, $k_B$ is Boltzmann's constant and
+$T$ is the temperature. However, there are issues with applying the
+Caldeira-Leggett model to our problem regarding the nature of the
+effect produced by the waves. In the situation presented in figure
+\ref{fig:rings} all of the test particles have constant spatial
+coordinates, they are stationary. However, the measured separation
+between the points changes according to $l^2 = -g_{ij} \xi^i
+\xi^j$. Modelling this effect via a classical force is questionable.
+
+In order to describe decoherence a master equation approach is
+necessary, but the most successful models for dissipation due to a
+system's interaction with the environment are not appropriate for the
+interaction of a quantum wave function with gravitational waves. The
+environment has also been modelled with a quantum field \cite{master}
+and for a certain class of interactions the approach is equivalent to
+the Caldeira-Leggett model. If a quantum field theory of gravity was
+developed then a similar approach could be used to derive a master
+equation to model decoherence due to gravitational fields.

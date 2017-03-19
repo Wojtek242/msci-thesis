@@ -1,0 +1,59 @@
+\section{Numerical Simulations}\label{sec:numerical}
+
+\subsection{The Algorithm}
+
+We solve the two-particle Schr\"{o}dinger equation for the Hamiltonian
+\eqref{eq:main} via the explicit staggered method \cite{numerics}. We
+choose our units such that $\hbar = 1$ and the neutron mass $m_n =
+1$. The wave function is evaluated on a grid of discrete values for
+the independent variables
+\begin{equation}
+\Psi(x_1, x_2, t) = \Psi(x_1 = l\Delta x, x_2 = m\Delta x, t = n\Delta
+t) \equiv \Psi^n_{l, m},
+\end{equation}
+where $l$, $m$ and $n$ are integers. We separate it into real and
+imaginary parts,
+\begin{equation}
+\Psi^n_{l,m} = u^{n+1}_{l,m} + iv^{n+1}_{l,m},
+\end{equation}
+which allows us to solve the Schr\"{o}dinger equation via a finite
+difference method with a pair of coupled equations:
+\begin{equation}
+\begin{array} {lcl}
+u^{n+1}_{l,m} & = & u^{n-1}_{l,m} - \left\{ \alpha \left[ v^n_{l+1,m}
+  + v^n_{l-1,m} + v^n_{l,m+1} + v^n_{l,m-1} - 4v^n_{l,m} \right] - 2
+\Delta t V_{l,m}v^n_{l,m} \right\} ,
+\end{array}
+\end{equation}
+\begin{equation}
+\begin{array} {lcl}
+v^{n+1}_{l,m} & = & v^{n-1}_{l,m} + \left\{ \alpha \left[ u^n_{l+1,m}
+  + u^n_{l-1,m} + u^n_{l,m+1} + u^n_{l,m-1} - 4u^n_{l,m} \right] - 2
+\Delta t V_{l,m}u^n_{l,m} \right\},
+\end{array}
+\end{equation}
+where 
+\begin{equation}
+\alpha = g^{xx}\frac{\Delta t}{\Delta x^2},
+\end{equation}
+and $V_{l,m}$ is the combined value of the potential due to the
+harmonic well and neutron-neutron interaction on the discretised
+grid given by
+\begin{equation}
+V_{l,m} = \frac{1}{2}\omega^2(l^2 + m^2)\Delta x^2 + \nu\delta_{l,m}.
+\end{equation}
+In order to evaluate the value of the real part at step $n+1$ we need
+to know the values of the real part at $n-1$ and the imaginary part at
+$n$. The same is true for evaluating the imaginary part. Therefore, we
+do not have to calculate both parts at every time step and we compute
+the real and imaginary parts at slightly different (staggered)
+times. The form of the discretised equations is identical to those
+presentied in \cite{numerics}. However, the value of $\alpha$ is now
+scaled by the oscillating metric tensor component $g^{xx}$. This novel
+modification does not lead to instabilities and simulations have been
+confirmed to conserve probability to the same precision as before.
+
+For the more general Laplacian \eqref{eq:general}, the equations have to
+be modified even further and new terms are introduced for the
+wavefunction's first derivative terms present. This too, does not
+cause instabilities and conserves probability very well.

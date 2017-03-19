@@ -1,0 +1,207 @@
+\section{The Model}\label{sec:model}
+
+\subsection{Gravitational Waves}
+
+Any reasonable signal possible to detect on Earth will be of
+astrophysical origin. Hence, we can assume that the source is far
+enough to treat the waves as plane waves. Therefore, in order for our
+model to be able to account for several gravitational waves we have to
+expand the formalism for the plane wave solutions presented in
+appendix \ref{sec:appendix} to a superposition of multiple waves. We
+adopt the viewpoint that $h_{\mu\nu}$ is a symmetric tensor field
+(under global Lorentz transformations) defined in quasi-Cartesian
+coordinates on a flat Minkowski background spacetime. Since we work
+with linearised general relativity we can easily obtain the solution
+by superposing the single plane wave solutions
+\begin{equation}\label{eq:manywaves}
+\bar{h}^{\mu\nu} = \sum_j(A_j)^{\mu\nu}\exp(i(k_j)_\rho x^\rho),
+\end{equation}
+where $A_j^{\mu\nu}$ are constant components of symmetric tensors and
+$(k_j)_\mu$ are the constant, real components of vectors. We assume the
+summation convention, but explicitly state the summation over the
+index $j$ as it does not run over the coordinate indices, but over all
+plane waves present.
+
+We consider a guage transformation of the same form as the transverse
+traceless gauge used in appendix A which is defined as
+\begin{equation}\label{eq:manyTT}
+\bar{h}^{0a}_{TT} \equiv 0 \,\,\,\,\,\, \text{and} \,\,\,\,\,\, \bar{h}_{TT} \equiv 0,
+\end{equation}
+where latin alphabet indices run over the spatial dimensions
+only. Furthermore the Lorenz gauge condition gives the constraints
+\begin{equation}
+\partial_0\bar{h}^{00}_{TT} = 0 \,\,\,\,\,\, \text{and} \,\,\,\,\,\, \partial_a\bar{h}^{ab}_{TT} = 0.
+\end{equation}
+Whilst we cannot consider this gauge to be transverse anymore since we
+are considering waves travelling in different directions, we will keep
+the labels since we are using exactly the same definition. This
+generalisation is straightforward, because of the linear nature of the
+field equations in a weak gravitational field. The field tensor
+transforms as 
+\begin{equation}\label{eq:transformation}
+\bar{h}^{\mu\nu}_{TT} = \bar{h}^{\mu\nu} - \partial^{\mu}\xi^{\nu} -
+\partial^{\nu}\xi^{\mu} + \eta^{\mu\nu}\partial_\rho\xi^\rho,
+\end{equation}
+where $\xi^\mu$ are four functions that define the gauge
+transformation and which must satisfy $\Box^2\xi^\mu$ to preserve the
+Lorenz gauge. The solution in \eqref{eq:manywaves} is a linear
+superposition of waves with different wavevectors and Each of the
+components can be transformed into the TT gauge using some set of
+functions $\xi^\mu_j$ (see appendix \ref{sec:appendix} for
+details). Therefore, we can transform \eqref{eq:manywaves} using
+$\xi^{\prime\mu} = \sum_j \xi^\mu_j$ since the transformation
+\eqref{eq:transformation} is linear in $\xi^\mu$. Applying this
+transformation gives us the same constraints on the constant
+$A_j^{\mu\nu}$ components separately for all values of $j$. Therefore
+in the new gauge the coefficients must satisfy
+\begin{equation}
+(A_j)^{0a}_{TT} = 0 \,\,\,\,\,\, \text{and} \,\,\,\,\,\, ((A_j)_{TT})^\mu_\mu = 0
+\end{equation}
+and the Lorenz gauge conditions require that
+\begin{equation}
+(A_j)^{00}_{TT} = 0 \,\,\,\,\,\, \text{and} \,\,\,\,\,\, (A_j)^{ab}_{TT}k_b = 0.
+\end{equation}
+Using these conditions we can construct a traceless tensor which
+satisfies the definition in \eqref{eq:manyTT}. It is a superposition
+of waves of the form \eqref{eq:manywaves}
+\begin{equation}\label{eq:manyh}
+\bar{h}^{\mu\nu}_{TT} = \sum_j(A_j)_{TT}^{\mu\nu}\exp(i(k_j)_\rho x^\rho),
+\end{equation}
+where $(A_j)_{TT}^{0\mu} = (A_j)_{TT}^{\mu 0} = 0$, the spatial
+components are given by
+\begin{equation}
+(A_j)^{ab}_{TT} = ((P_j)^a_c(P_j)^b_d - \frac{1}{2}(P_j)^{ab}(P_j)_{cd})(A_j)^{cd},
+\end{equation}
+$(P_j)_{ab} \equiv \delta_{ab} - (n_j)_a(n_j)_b$ and $(n_j)_a =
+(\hat{k}_j)_a$.
+
+\subsection{Neutron-neutron Interaction}
+
+Nucleon-nucleon scattering is fundamentally a many body problem
+governed by quantum chromodynamics. However, the strong interaction
+has a very short range ($\sim$ a few fm) and $kR \ll 1$, where $k$ is
+the neutron wave vector and $R$ the range of the potential. This means
+that we only have to consider s-wave scattering and we can approximate
+the scattering potential with a delta function $V_{nn} =
+U\delta(\vec{r}_1 - \vec{r}_2)$. To obtain the value of $U$ we use the
+fact that for s-wave scattering the cross-section is given by $\sigma
+= 4\pi a_s^2$, where $a_s$ is the scattering length which can be
+measured experimentally. Therefore, in the Born approximation we
+obtain
+\begin{equation}\label{eq:nn}
+U = \frac{2 \pi a_s \hbar^2}{m_n},
+\end{equation}
+where $m_n$ is the mass of the neutron. Gravitational waves cause the
+distance between the two neutrons, $|\vec{r}_1 - \vec{r}_2|$, to
+oscillate. However, because the inter-particle interaction is in the
+form of a contact potential it remains unaffected in the presence of a
+passing wave. The physical spatial separation will only be zero if the
+coordinate separation vector will also be zero.
+
+\subsection{The Schr\"{o}dinger Equation}
+
+The gravitational wave background is predicted to have no significant
+components at wavelengths shorter than a few km which is much larger
+than the lengthscales we are considering for the
+experiment. Therefore, combined with the fact that we are only
+considering weak gravitational fields, we can assume that in order to
+model the effect of gravitational waves on the quantum state of two
+neutrons in a harmonic trap we do not need to resort to a full quantum
+description of the interaction.
+
+In order to incorporate the effect of passing waves on the quantum
+state we begin by considering the two-particle Schr\"{o}dinger
+equation for the Hamiltonian given in \eqref{eq:hamiltonian}
+\begin{equation}\label{eq:schrodinger}
+i\hbar\frac{\partial \Psi(x_1, x_2; t)}{\partial t} = \left[
+  -\frac{\hbar^2}{2m}\left( \frac{\partial^2}{\partial x_1^2} +
+  \frac{\partial^2}{\partial x_2^2} \right) +
+  \frac{1}{2}m\omega^2(x_1^2 + x_2^2) + V_{nn}(x_1-x_2)
+  \right]\Psi(x_1, x_2; t).
+\end{equation}
+We have already shown that the form of $V_{nn}$ is unaffected. The
+potential due to the interaction with the harmonic trap also remains
+unchanged as it does not depend on the physical separation between two
+points. A huge benefit of the gauge we have chosen to work in is the
+fact that only the spatial components of the metric are affected by
+the gravitational wave which means that the time derivative on the
+left hand side does not have to be modified. Only the spatial
+derivatives have to be considered in this situation.
+
+For a general metric the Laplacian of a scalar field is given by
+\begin{equation}\label{eq:laplacian}
+\nabla^2\phi = \frac{1}{\sqrt{|g|}}\partial_a \left( \sqrt{|g|} g^{ab}
+\partial_b\phi \right),
+\end{equation}
+where $g$ is the determinant of the metric tensor which in the TT
+gauge, to first order in $h$, is equal to unity. We now want to reduce
+the problem to only one spatial dimension to simplify the model. As
+this is only an investigation into the feasibility of such an
+experiment such a simplification is desirable as it reduces the
+necessary computational time required to obtain qualitatively the same
+results. The gravitational waves are very weak so we assume that
+confinement in the $y$ and $z$ directions is strong enough that the
+wavefunction remains in its ground state along those axes at all
+times. This means that we can ignore all second derivative terms apart
+from $\frac{\partial^2 \Psi}{\partial x^2}$ since this is the only
+significant kinetic energy term. Furthermore, we will have terms of
+the form $\partial_a g^{ab} \partial_b \phi$. These terms can also be
+ignored, because $\partial_a g^{ab} \propto k_a$ and for any realistic
+setup the wavelength of the waves will be much larger than the size of
+the expriment making these terms insignificant. Therefore the only
+relevant terms that we are left with are
+\begin{equation}\label{eq:kinetic}
+\nabla^2 \Psi = g^{xx}\frac{\partial^2 \Psi}{\partial x^2},
+\end{equation}
+where the effective form of $g^{xx}$ is obtained from \eqref{eq:manyh}
+\begin{equation}
+g^{xx} = 1 + \sum_i A^{xx}_i \cos(\Omega_i t + \phi_i),
+\end{equation}
+$\Omega_i$ is the frequency of the $i$th wave, $\phi_i$ is the $i$th
+wave's phase at $x=0$ and we have ignored phase variation along the
+trap axis, $k_x x$, since we consider wavelengths much larger than the
+dimensions of the well.
+
+The most general form of the one-dimensional Laplacian in the TT gauge
+that preserves probability when used in the Sch\"{o}dinger equation is
+\begin{equation}\label{eq:general}
+\nabla^2 \Psi = g^{xx}\frac{\partial^2 \Psi}{\partial x^2} +
+\frac{\partial g^{xx}}{\partial x} \frac{\partial \Psi}{\partial x}.
+\end{equation}
+This imposes some additional restrictions on the components of the
+metric tensor. We again ignore second derivative terms due to
+confinement along the other axes. However, we must now require $g^{xy}
+= g^{xz} = 0$ for equation \eqref{eq:general} to be correct. In order
+to investigate gravitational waves with shorter wavelengths we want to
+be able to use this equation for the Laplacian. However, under the TT
+and Lorenz gauge conditions the additional constraints also require
+$g^{xx} = 0$ unless the wavevectors are perpendicular to the
+$x$-axis. This in turn implies $\partial_x g^{xx} = 0$ since $k_x =
+0$. Therefore, in our investigation we always use equation
+\eqref{eq:kinetic}, but for wavelengths comparable to or smaller than
+the trap dimensions this limits us to the study of waves perpendicular
+to the $x$-axis.
+
+Neutrons are spin-$\frac{1}{2}$ particles and so also we have to
+address the question of how the intrinsic angular momentum of the
+particles couples to the gravitational waves. The theoretical
+possibility of such coupling was first considered by Kobzarev and Okun
+in 1963 \cite{kobzarev}. If we consider a Newtonian gravitational
+potential $\phi$ then the coupling to spin would take the form
+$H_{int}=A\vec{\sigma}\cdot\nabla\phi$, where $A$ is an amplitude
+and $\vec{\sigma}$ is the particle spin. However, this violates the
+equivalence principle which states that the trajectory of a point mass
+in a gravitational field depends only on its initial position and
+velocity, and is independent of its composition. Therefore, we do not
+have to take into account any spin-gravity coupling since we are
+working in the weak field limit.
+
+The final form of the two-particle Hamiltonian that we
+will be investigating is
+\begin{equation}\label{eq:main}
+\hat{H} = - g^{xx} \frac{\hbar^2}{2m} \left(
+  \frac{\partial^2}{\partial x_1^2} + \frac{\partial^2}{\partial
+    x_2^2} \right) + \frac{1}{2}m\omega^2(x_1^2 + x_2^2) +
+V_{nn}(x_1-x_2).
+\end{equation}
+

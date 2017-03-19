@@ -1,0 +1,190 @@
+\appendix
+\section{\large Gravitational Waves in Linearised General Relativity}\label{sec:appendix}
+
+In general relativity we consider pseudo-Riemannian manifolds in which
+the interval is given by (assuming the summation convention) 
+\begin{equation}
+ds^2=g_{\mu\nu}(x)dx^{\mu}dx^{\nu}
+\end{equation}
+where $g_{\mu\nu}$ are the components of the metric tensor field in
+the chosen coordinate system. A weak gravitational field corresponds
+to a region of spacetime that is only slightly curved. Thus, there
+exist coordinate systems $x^{\mu}$ in which the spacetime metric takes
+the form
+\begin{equation}\label{eq:linear}
+g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}
+\end{equation}
+where $|h_{\mu\nu}| \ll 1$, the partial derivatives of $h_{\mu\nu}$
+are also small and $\eta_{\mu\nu}$ are the components of the metric
+tensor in flat Minkowski spacetime.
+
+It can be shown that for infinitesimal general coordinate
+transformations of the form
+\begin{equation}
+x^{\prime\mu} = x^{\mu}+\xi^{\mu}(x),
+\end{equation}
+working to first order in small quantities, the metric transforms as
+follows:
+\begin{equation}
+g^{\prime}_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu} - \partial_\mu\xi_\nu
+- \partial_\nu\xi_\mu.
+\end{equation}
+We note that $g^{\prime}_{\mu\nu}$ is of the same form
+as \eqref{eq:linear}, hence the new metric perturbation functions are
+related to the old ones via
+\begin{equation}\label{eq:gauge}
+h^{\prime}_{\mu\nu} = h_{\mu\nu} - \partial_\mu\xi_\nu
+- \partial_\nu\xi_\mu.
+\end{equation}
+
+We consider $h_{\mu\nu}$ to be a tensor field defined on the flat
+Minkowski background spacetime, hence \eqref{eq:gauge} can be
+considered as analogous to a gauge transformation in
+electromagnetism. If $h_{\mu\nu}$ is a solution to the linearised
+gravitational field equations then the same
+physical situation is desribed by \eqref{eq:gauge}. However, in this
+viewpoint \eqref{eq:gauge} is viewed as a gauge transformation rather
+than a coordinate transformation. We are still working in the same set
+of coordinates $x^\mu$ and have defined a new tensor whose components
+in this coordinate system are given by \eqref{eq:gauge}. Here we adopt
+the viewpoint that $h_{\mu\nu}$ is a symmetric tensor field (under
+global Lorentz transformations) defined in quasi-Cartesian coordinates
+on a flat Minkowski background spacetime.
+
+The linearised field equations of general relativity can be written as
+\begin{equation}
+\Box^2\bar{h}^{\mu\nu} = -2\kappa T^{\mu\nu},
+\end{equation}
+where $T^{\mu\nu}$ is the energy-momentum tensor,
+$\bar{h}^{\mu\nu} \equiv h^{\mu\nu} - \frac{1}{2}\eta^{\mu\nu}h$, $h =
+h^\mu_\mu$, provided that the $\bar{h}^{\mu\nu}$ components satisfy
+the Lorenz gauge condition
+\begin{equation}
+\partial_\mu\bar{h}^{\mu\nu} = 0.
+\end{equation}
+In vacuo, where $T^{\mu\nu} = 0$, the general solution of the
+linearised field equations may be written as a superposition of
+plane-wave solutions of the form
+\begin{equation}\label{eq:wave}
+\bar{h}^{\mu\nu} = A^{\mu\nu}\exp(ik_\rho x^\rho),
+\end{equation}
+where $A^{\mu\nu}$ are constant components of a symmetric tensor and
+$k_\mu$ are the constant, real components of a vector. The Lorenz gauge
+condition is satisfied provided
+\begin{equation}
+A^{\mu\nu}k_\nu = 0.
+\end{equation}
+Physical solutions may be obtained by taking the real part
+of \eqref{eq:wave}.
+
+Further gauge transformations will preserve the Lorenz gauge condition
+provided that the four functions $\xi^\mu(x)$ satisfy $\Box^2\xi^\mu =
+0$. A common choice for plane gravitational waves is the
+transverse-traceless gauge defined by choosing
+\begin{equation}\label{eq:TT}
+\bar{h}^{0i}_{TT} \equiv 0 \,\,\,\,\,\, \text{and} \,\,\,\,\,\, \bar{h}_{TT} \equiv 0,
+\end{equation}
+where latin alphabet indices run over the spatial dimensions
+only. Furthermore the Lorenz gauge condition gives the constraints
+\begin{equation}\label{eq:lorenzTT}
+\partial_0\bar{h}^{00}_{TT} = 0 \,\,\,\,\,\, \text{and} \,\,\,\,\,\, \partial_i\bar{h}^{ij}_{TT} = 0.
+\end{equation}
+We note that the first condition in \eqref{eq:lorenzTT} implies that
+for non-stationary perturbations $\bar{h}^{00}_{TT}$ also
+vanishes. Therefore, in this gauge only the spatial components
+$\bar{h}^{ij}_{TT}$ are non-zero.
+
+For a particular case of an arbitrary plane gravitational wave of the
+form \eqref{eq:wave} the conditions \eqref{eq:TT} imply that
+\begin{equation}
+A^{0i}_{TT} = 0 \,\,\,\,\,\, \text{and} \,\,\,\,\,\, (A_{TT})^\mu_\mu = 0
+\end{equation}
+and the Lorenz gauge conditions in \eqref{eq:lorenzTT} require that
+\begin{equation}
+A^{00}_{TT} = 0 \,\,\,\,\,\, \text{and} \,\,\,\,\,\, A^{ij}_{TT}k_j = 0.
+\end{equation}
+Under these conditions the $A^{\mu\nu}_{TT}$ components are given by
+\begin{equation}
+A^{ij}_{TT} = (P^i_kP^j_l - \frac{1}{2}P^{ij}P_{kl})A^{kl},
+\end{equation}
+where $P_{ij} \equiv \delta_{ij} - n_in_j$ and $n_i = \hat{k}_i$ \cite{hobson}.
+
+\section{The Algorithm}
+
+We solve the two-particle Schr\"{o}dinger equation for the Hamiltonian
+\eqref{eq:main} via the explicit staggered method \cite{numerics}. We
+choose our units such that $\hbar = 1$ and the neutron mass $m_n =
+1$. The wave function is evaluated on a grid of discrete values for
+the independent variables
+\begin{equation}
+\Psi(x_1, x_2, t) = \Psi(x_1 = l\Delta x, x_2 = m\Delta x, t = n\Delta
+t) \equiv \Psi^n_{l, m},
+\end{equation}
+where $l$, $m$ and $n$ are integers. We separate it into real and
+imaginary parts,
+\begin{equation}
+\Psi^n_{l,m} = u^{n+1}_{l,m} + iv^{n+1}_{l,m},
+\end{equation}
+which allows us to solve the Schr\"{o}dinger equation via a finite
+difference method with a pair of coupled equations:
+\begin{samepage}
+\begin{equation}
+u^{n+1}_{l,m} = u^{n-1}_{l,m} - \left\{ \alpha \left[ v^n_{l+1,m} +
+  v^n_{l-1,m} + v^n_{l,m+1} + v^n_{l,m-1} - 4v^n_{l,m} \right] - 2
+\Delta t V_{l,m}v^n_{l,m} \right\} ,
+\end{equation}
+\begin{equation}
+v^{n+1}_{l,m} = v^{n-1}_{l,m} + \left\{ \alpha \left[ u^n_{l+1,m} +
+  u^n_{l-1,m} + u^n_{l,m+1} + u^n_{l,m-1} - 4u^n_{l,m} \right] - 2
+\Delta t V_{l,m}u^n_{l,m} \right\},
+\end{equation}
+\end{samepage}
+where 
+\begin{equation}
+\alpha = g^{xx}\frac{\Delta t}{\Delta x^2},
+\end{equation}
+and $V_{l,m}$ is the combined value of the potential due to the
+harmonic well and neutron-neutron interaction on the discretised
+grid given by
+\begin{equation}
+V_{l,m} = \frac{1}{2}\omega^2(l^2 + m^2)\Delta x^2 + \nu\delta_{l,m}.
+\end{equation}
+In order to evaluate the value of the real part at step $n+1$ we need
+to know the values of the real part at $n-1$ and the imaginary part at
+$n$. The same is true for evaluating the imaginary part. Therefore, we
+do not have to calculate both parts at every time step and we compute
+the real and imaginary parts at slightly different (staggered)
+times. The form of the discretised equations is identical to those
+presentied in \cite{numerics}. However, the value of $\alpha$ is now
+scaled by the oscillating metric tensor component $g^{xx}$. This novel
+modification does not lead to instabilities and simulations have been
+confirmed to conserve probability to the same precision as before.
+
+For the more general Laplacian \eqref{eq:general}, the equations have to
+be modified even further and new terms are introduced for the
+wavefunction's first derivative terms present
+\begin{equation}
+\begin{array}{lcl}
+u^{n+1}_{l,m} & = & u^{n-1}_{l,m} - \left\{ \alpha \left[ v^n_{l+1,m}
+  + v^n_{l-1,m} + v^n_{l,m+1} + v^n_{l,m-1} -
+  4v^n_{l,m} \right] \right. \\\\ & & \left. + \beta \left[ v^n_{l+1,m} -
+  v^n_{l-1,m} + v^n_{l, m+1} - v^n_{l, m-1} \right] - 2
+\Delta t V_{l,m}v^n_{l,m} \right\} ,
+\end{array}
+\end{equation}
+\begin{equation}
+\begin{array}{lcl}
+v^{n+1}_{l,m} & = & v^{n-1}_{l,m} + \left\{ \alpha \left[ u^n_{l+1,m}
+  + u^n_{l-1,m} + u^n_{l,m+1} + u^n_{l,m-1} -
+  4u^n_{l,m} \right] \right. \\\\ & & \left. + \beta \left[
+  u^n_{l+1,m} - u^n_{l-1,m} + u^n_{l, m+1} - u^n_{l, m-1} \right] - 2
+\Delta t V_{l,m}u^n_{l,m} \right\},
+\end{array}
+\end{equation}
+where
+\begin{equation}
+\beta = \frac{\partial g^{xx}}{\partial x} \frac{\Delta t}{2 \Delta x}.
+\end{equation}
+The two components can still be evaluated at staggered times. This
+further modification does not cause instabilities and conserves
+probability very well.
